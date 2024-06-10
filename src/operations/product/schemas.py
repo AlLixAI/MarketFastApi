@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class ProductCreate(BaseModel):
@@ -7,8 +7,7 @@ class ProductCreate(BaseModel):
     stock: int
     image_url: str
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
 
 class ProductRead(BaseModel):
     id: int
@@ -17,5 +16,4 @@ class ProductRead(BaseModel):
     stock: int
     image_url: str
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)

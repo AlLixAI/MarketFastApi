@@ -14,7 +14,9 @@ class UserManager(IntegerIDMixin, BaseUserManager[User, int]):
     verification_token_secret = SECRET_AUTH
 
     async def on_after_register(self, user: User, request: Optional[Request] = None):
-        send_email_congrats_to_join.delay(user.username, user.email)
+        print(f"User {user.id} has registered")
+
+        # send_email_congrats_to_join.delay(user.username, user.email)
 
 
 
