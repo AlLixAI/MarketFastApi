@@ -30,9 +30,6 @@ MarketFastApi is a project designed to facilitate the creation of market-related
 2. Access the API documentation at 'http://127.0.0.1:8000/docs'.
 
 ## Project Structure
-## Project Structure
-
-## Project Structure
 
 ```plaintext
 MarketFastApi/
